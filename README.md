@@ -38,7 +38,7 @@ streaming capabilities.
    
 ### Required environment variables
 |           Variable            | Description                                                                                           |                  Example                  |
-|:-----------------------------:|-------------------------------------------------------------------------------------------------------|:-----------------------------------------:|
+|:-----------------------------:|:------------------------------------------------------------------------------------------------------|:-----------------------------------------:|
 |      `MEDIA_SERVER_NAME`      | Name for your media server                                                                            |             `my-media-server`             |
 |           `USER_ID`           | User ID for file permissions                                                                          |                  `1000`                   |
 |          `GROUP_ID`           | Group ID for file permissions                                                                         |                  `1000`                   |
@@ -67,7 +67,7 @@ streaming capabilities.
 After starting, you can access the services at (using the values from [.env.example](./.env.example)):
 
 |   Service   | Port  | URL                                                    |
-|:-----------:|:-----:|--------------------------------------------------------|
+|:-----------:|:-----:|:-------------------------------------------------------|
 |    Plex     | 32400 | `http://192.168.1.34:32400/web`                        |
 |   Sonarr    | 8989  | `http://192.168.1.34:8989`                             |
 |   Radarr    | 7878  | `http://192.168.1.34:7878`                             |
