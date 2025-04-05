@@ -66,17 +66,17 @@ streaming capabilities.
 ## Accessing services
 After starting, you can access the services at (using the values from [.env.example](./.env.example)):
 
-| Service     | Port  | URL                                                    |
-|-------------|-------|--------------------------------------------------------|
-| Plex        | 32400 | `http://192.168.1.34:32400/web`                        |
-| Sonarr      | 8989  | `http://192.168.1.34:8989`                             |
-| Radarr      | 7878  | `http://192.168.1.34:7878`                             |
-| Bazarr      | 6767  | `http://192.168.1.34:6767`                             |
+|   Service   | Port  | URL                                                    |
+|:-----------:|:-----:|--------------------------------------------------------|
+|    Plex     | 32400 | `http://192.168.1.34:32400/web`                        |
+|   Sonarr    | 8989  | `http://192.168.1.34:8989`                             |
+|   Radarr    | 7878  | `http://192.168.1.34:7878`                             |
+|   Bazarr    | 6767  | `http://192.168.1.34:6767`                             |
 | qBittorrent | 8090  | `http://192.168.1.34:8090`                             |
-| Jackett     | 9117  | `http://192.168.1.34:9117`                             |
-| Prowlarr    | 9696  | `http://192.168.1.34:9696`                             |
-| Stremio     | 8080  | `https://192-168-1-34.519b6502d940.stremio.rocks:8080` |
-| WireGuard   | 51820 | UDP port for VPN connections                           |
+|   Jackett   | 9117  | `http://192.168.1.34:9117`                             |
+|  Prowlarr   | 9696  | `http://192.168.1.34:9696`                             |
+|   Stremio   | 8080  | `https://192-168-1-34.519b6502d940.stremio.rocks:8080` |
+|  WireGuard  | 51820 | UDP port for VPN connections                           |
 
 ## Configuration guides
 1. **Plex**: Complete the initial setup wizard and add your media libraries
