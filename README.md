@@ -2,6 +2,18 @@
 A complete Docker Compose setup for a self-hosted home media server with automated downloading, organization, and 
 streaming capabilities.
 
+* [Features](#features)
+* [Prerequisites](#prerequisites)
+* [Setup instructions](#setup-instructions)
+  * [Required environment variables](#required-environment-variables)
+* [Accessing services](#accessing-services)
+* [Configuration guides](#configuration-guides)
+* [Maintenance](#maintenance)
+* [Security notes](#security-notes)
+* [Troubleshooting](#troubleshooting)
+* [Contributing](#contributing)
+* [License](#license)
+
 ## Features
 - **Media management**: Plex for media streaming, with Sonarr (TV) and Radarr (movies) for automated downloading
 - **VPN integration**: NordLynx (WireGuard) for secure torrenting with qBittorrent
@@ -17,7 +29,7 @@ streaming capabilities.
 3. A DuckDNS account (for dynamic DNS)
 4. A NordVPN subscription (for NordLynx)
 
-## Setup Instructions
+## Setup instructions
 1. Clone this repository:
    ```bash
    git clone https://github.com/danozka/home-media-server.git
