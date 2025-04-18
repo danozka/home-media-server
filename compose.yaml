@@ -27,28 +27,28 @@ services:
     volumes:
       - ${MEDIA_SERVER_CONFIG_PATH}/bazarr:/config
       - ${MEDIA_SERVER_MOVIES_PATH}:/movies
-      - $MEDIA_SERVER_TV_PATH}:/tv
+      - ${MEDIA_SERVER_TV_PATH}:/tv
   duckdns:
     container_name: duckdns
     environment:
-      - PUID=$USER_ID}
-      - PGID=$GROUP_ID}
-      - TZ=$TIME_ZONE}
-      - SUBDOMAINS=$DUCKDNS_SUBDOMAIN}
-      - TOKEN=$DUCKDNS_TOKEN}
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+      - SUBDOMAINS=${DUCKDNS_SUBDOMAIN}
+      - TOKEN=${DUCKDNS_TOKEN}
       - LOG_FILE=false
     healthcheck:
       test: pgrep -f /app/duck.sh || exit 1
     image: lscr.io/linuxserver/duckdns:latest
     restart: unless-stopped
     volumes:
-      - $MEDIA_SERVER_CONFIG_PATH}/duckdns:/config
+      - ${MEDIA_SERVER_CONFIG_PATH}/duckdns:/config
   jackett:
     container_name: jackett
     environment:
-      - PUID=$USER_ID}
-      - PGID=$GROUP_ID}
-      - TZ=$TIME_ZONE}
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
       - AUTO_UPDATE=true
     healthcheck:
       test: curl -f http://${MEDIA_SERVER_IP}:${JACKETT_PORT} || exit 1
