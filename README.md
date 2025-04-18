@@ -93,9 +93,10 @@ After starting, you can access the services at (using the values from [.env.exam
 ## Configuration guides
 1. **Plex**: Complete the initial setup wizard and add your media libraries
 2. **Sonarr / Radarr**: Configure indexers (Jackett / Prowlarr) and download client (qBittorrent)
-3. **qBittorrent**: Set network interface to NordLynx and configure appropriate ports
-4. **WireGuard**: Scan the QR codes in `/config/wireguard/peerX` to connect mobile devices
-5. **Stremio**: Set streaming server port to `https://192-168-1-34.519b6502d940.stremio.rocks:12470/`
+3. **Bazarr**: Configure subtitle providers
+4. **qBittorrent**: Set network interface to NordLynx and configure appropriate ports
+5. **WireGuard**: Scan the QR codes in `/config/wireguard/peerX` to connect mobile devices
+6. **Stremio**: Set streaming server port to `https://192-168-1-34.519b6502d940.stremio.rocks:12470/`
 
 ## Maintenance
 - **Updates**: Run `docker compose pull && docker compose up -d` to update all containers
