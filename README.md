@@ -112,7 +112,7 @@ After starting, you can access the services at (using the values from [.env.exam
 1. **Plex**: Complete the initial setup wizard and add your media libraries
 2. **Sonarr / Radarr**: Configure indexers (Jackett / Prowlarr) and download client (qBittorrent)
 3. **Bazarr**: Configure subtitle providers
-4. **qBittorrent**: Set network interface to Gluetun and configure appropriate ports
+4. **qBittorrent**: Set network interface to the VPN one and configure appropriate ports
 5. **WireGuard**: Scan the QR codes in `/config/wireguard/peerX` to connect mobile devices
 6. **Stremio**: Set streaming server port to `https://192-168-1-34.519b6502d940.stremio.rocks:12470/`
 
