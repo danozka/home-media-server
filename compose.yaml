@@ -50,6 +50,7 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     environment:
+      - FIREWALL_OUTBOUND_SUBNETS=${MEDIA_SERVER_NETWORK_CIDR}
       - VPN_SERVICE_PROVIDER=nordvpn
       - VPN_TYPE=wireguard
       - WIREGUARD_PRIVATE_KEY=${VPN_PRIVATE_KEY}
