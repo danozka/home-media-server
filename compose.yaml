@@ -46,6 +46,7 @@ services:
   gluetun:
     cap_add:
       - NET_ADMIN
+    container_name: gluetun
     devices:
       - /dev/net/tun:/dev/net/tun
     environment:
@@ -143,7 +144,7 @@ services:
     healthcheck:
       test: curl -f http://${MEDIA_SERVER_IP}:${QBITTORRENT_WEBUI_PORT} || exit 1
     image: lscr.io/linuxserver/qbittorrent:latest
-    network_mode: service:nordlynx
+    network_mode: service:gluetun
     restart: unless-stopped
     volumes:
       - ${MEDIA_SERVER_CONFIG_PATH}/qbittorrent:/config
@@ -192,7 +193,7 @@ services:
     healthcheck:
       test: (curl -f https://${STREMIO_HOSTNAME}:${STREMIO_WEBUI_PORT}/ && curl -f https://${STREMIO_HOSTNAME}:${STREMIO_SERVER_PORT}/) || exit 1
     image: tsaridas/stremio-docker:latest
-    network_mode: service:nordlynx
+    network_mode: service:gluetun
     restart: unless-stopped
     volumes:
       - ${MEDIA_SERVER_DOWNLOADS_PATH}/stremio:/root/.stremio-server
