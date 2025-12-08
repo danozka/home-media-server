@@ -23,7 +23,7 @@ while enjoying automated, organized media bliss.
   - **No more "subtitle not found"**: Bazarr automatically grabs subtitles so you are never left squinting
 
 - ### Torrent safely without ISP warnings
-  - Built-in NordLynx (WireGuard) VPN tunnels all torrent traffic through qBittorrent
+  - Built-in WireGuard VPN tunnels all torrent traffic through qBittorrent
   - Your IP stays hidden while you build your media library
   - Sleep easy knowing your activity is private
 
@@ -36,7 +36,7 @@ while enjoying automated, organized media bliss.
 **Prerequisites**:
 - Git and Docker Compose installed
 - DuckDNS account (for dynamic DNS)
-- NordVPN subscription (for NordLynx)
+- NordVPN subscription (for secure VPN connection)
 
 **You do not need to be a Docker expert** - if you can edit a config file, you can have this running today:
 
@@ -77,7 +77,7 @@ docker compose up -d
 |  `MEDIA_SERVER_NETWORK_CIDR`  |                                        Your local network CIDR                                        |             `192.168.1.0/24`              |
 |      `DUCKDNS_SUBDOMAIN`      |                                        Your DuckDNS subdomain                                         |                `my-server`                |
 |        `DUCKDNS_TOKEN`        |                                          Your DuckDNS token                                           |         `my-secret-duckdns-token`         |
-|    `NORDLYNX_PRIVATE_KEY`     |                                          NordVPN private key                                          |         `my-nordlynx-private-key`         |
+|       `VPN_PRIVATE_KEY`       |                                            VPN private key                                            |           `my-vpn-private-key`            |
 |  `MEDIA_SERVER_CONFIG_PATH`   |                                         Path for config files                                         |            `/path/to/configs`             |
 |  `MEDIA_SERVER_MOVIES_PATH`   |                                            Path for movies                                            |             `/path/to/movies`             |
 |    `MEDIA_SERVER_TV_PATH`     |                                           Path for TV shows                                           |               `/path/to/tv`               |
@@ -112,7 +112,7 @@ After starting, you can access the services at (using the values from [.env.exam
 1. **Plex**: Complete the initial setup wizard and add your media libraries
 2. **Sonarr / Radarr**: Configure indexers (Jackett / Prowlarr) and download client (qBittorrent)
 3. **Bazarr**: Configure subtitle providers
-4. **qBittorrent**: Set network interface to NordLynx and configure appropriate ports
+4. **qBittorrent**: Set network interface to Wireguard and configure appropriate ports
 5. **WireGuard**: Scan the QR codes in `/config/wireguard/peerX` to connect mobile devices
 6. **Stremio**: Set streaming server port to `https://192-168-1-34.519b6502d940.stremio.rocks:12470/`
 
