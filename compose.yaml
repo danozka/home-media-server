@@ -189,10 +189,10 @@ services:
       - TZ=${TIME_ZONE}
       - SERVERURL=${DUCKDNS_SUBDOMAIN}.duckdns.org
       - SERVERPORT=51820
-      - PEERS=3
+      - PEERS=4
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
-      - ALLOWEDIPS=${MEDIA_SERVER_IP}
+      - ALLOWEDIPS=0.0.0.0/0
       - LOG_CONFS=true
     healthcheck:
       test: wg show || exit 1
