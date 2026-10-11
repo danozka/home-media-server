@@ -86,7 +86,6 @@ docker compose up -d
 |         `RADARR_PORT`         |                                         Port to access Radarr                                         |                  `7878`                   |
 |         `SONARR_PORT`         |                                         Port to access Sonarr                                         |                  `8989`                   |
 |      `STREMIO_HOSTNAME`       |                                         Hostname for Stremio                                          | `192-168-1-34.519b6502d940.stremio.rocks` |
-|     `STREMIO_SERVER_PORT`     |                                     Port to access Stremio server                                     |                  `12470`                  |
 |     `STREMIO_WEBUI_PORT`      |                                     Port to access Stremio Web UI                                     |                  `8080`                   |
 |          `TIME_ZONE`          | Your time zone (check this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)) |              `Europe/London`              |
 |           `USER_ID`           |                                     User ID for file permissions                                      |                  `1000`                   |
@@ -114,7 +113,6 @@ After starting, you can access the services at (using the values from [.env.exam
 3. **Bazarr**: Configure subtitle providers
 4. **qBittorrent**: Set network interface to the VPN one and configure appropriate ports
 5. **WireGuard**: Scan the QR codes in `/config/wireguard/peerX` to connect mobile devices
-6. **Stremio**: Set streaming server port to `https://192-168-1-34.519b6502d940.stremio.rocks:12470/`
 
 ## Maintenance
 - **Updates**: Run `docker compose pull && docker compose up -d` to update all containers
