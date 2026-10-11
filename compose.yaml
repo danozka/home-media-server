@@ -172,6 +172,7 @@ services:
       AUTO_SERVER_URL: 1
       CASTING_DISABLED: 1
       IPADDRESS: ${MEDIA_SERVER_IP}
+      WEBUI_LOCATION: https://${STREMIO_HOSTNAME}:${STREMIO_WEBUI_PORT}
     healthcheck:
       test: (curl -f https://${STREMIO_HOSTNAME}:${STREMIO_WEBUI_PORT}/ && curl -f https://${STREMIO_HOSTNAME}:${STREMIO_SERVER_PORT}/) || exit 1
     image: tsaridas/stremio-docker:latest
